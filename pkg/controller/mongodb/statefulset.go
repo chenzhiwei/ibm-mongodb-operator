@@ -233,7 +233,7 @@ spec:
               mountPath: /work-dir
             - name: tmp-mongodb
               mountPath: /tmp
-    
+
         - name: metrics
           image: "{{ .ImageRepo }}/ibm-mongodb-exporter:3.3.2"
           imagePullPolicy: "IfNotPresent"
@@ -358,5 +358,5 @@ spec:
         resources:
           requests:
             storage: 20Gi
-        storageClassName: {{ .StorageClass }}
+        {{ .StorageClass }}
 `
